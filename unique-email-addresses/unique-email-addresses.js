@@ -8,7 +8,6 @@
     if there's a '+' in local name, only use to the left of +
     domain (right of @) name with more than one '.' are invalid
  E: N/A
- 
 */
 const numUniqueEmails = (emails) => {
   let counter = 0;
