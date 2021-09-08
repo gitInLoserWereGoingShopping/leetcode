@@ -9,7 +9,6 @@
  *     }
  * }
  */
-
 function deleteDuplicates(head: ListNode | null): ListNode | null {
     let current = head;
     while (current && current.next) {
