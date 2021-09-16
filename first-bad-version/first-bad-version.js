@@ -7,7 +7,6 @@
  *     ...
  * };
  */
-
 /**
  * @param {function} isBadVersion()
  * @return {function}
