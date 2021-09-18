@@ -1,8 +1,3 @@
-/**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
- */
 const twoSum = (numbers, target) =>
 {
   let cache = {};
