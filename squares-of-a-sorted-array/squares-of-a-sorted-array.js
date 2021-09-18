@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
 const sortedSquares = (nums) =>
 {
   let squaredNums = nums.map(num => Math.abs(num) * Math.abs(num));
