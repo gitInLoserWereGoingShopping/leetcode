@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {boolean}
  */
+
 const isPalindrome = (s) =>
 {
   let alphaNumStr = ''
