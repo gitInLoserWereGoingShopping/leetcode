@@ -3,29 +3,26 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = (s) =>
+{
+  if (!s.length) return 0;
+  let max = 1;
+  let L = 0;
+  let R = L + 1;
+  let set = new Set().add(s[L]);
+  while (L <= s.length)
   {
-    if (s.length === 0) return 0;
-    let max = 1;
-    let counter = 1;
-    let L = 0;
-    let R = L + 1;
-    let map = new Map().set(s[L], 1);
-    while (L <= s.length)
+    if (s[R] !== undefined && !set.has(s[R]))
     {
-      if (s[R] !== undefined && !map.has(s[R]))
-      {
-        counter++;
-        if (counter > max) max++;
-        map.set(s[R], 1);
-        R++;
-      }
-      else
-      {
-        counter = 1;
-        L++;
-        map = new Map().set(s[L], 1);
-        R = L + 1;
-      }
+      set.add(s[R]);
+      if (set.size > max) max++;
+      R++;
     }
-    return max;
-  };
+    else
+    {
+      L++;
+      set = new Set().add(s[L]);
+      R = L + 1;
+    }
+  }
+  return max;
+};
